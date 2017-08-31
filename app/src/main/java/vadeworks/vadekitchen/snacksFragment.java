@@ -57,7 +57,7 @@ public class snacksFragment extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_snacks, container, false);//TODO: Should CHange this accordinly
         context = getActivity().getApplicationContext();
-        ((MainActivity) getActivity()).getSupportActionBar().setTitle("Snacks");
+        ((MainActivity) getActivity()).getSupportActionBar().setTitle(R.string.Snacks);
 
 
         list = (ListView) view.findViewById(R.id.snacksList);//TODO: Should CHange this accordinly

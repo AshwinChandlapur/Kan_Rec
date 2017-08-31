@@ -62,7 +62,7 @@ public class festiveFragment extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_festive, container, false);//TODO: Should CHange this accordinly
         context = getActivity().getApplicationContext();
-        ((MainActivity) getActivity()).getSupportActionBar().setTitle("Festive Delicacy");
+        ((MainActivity) getActivity()).getSupportActionBar().setTitle(R.string.Festive);
 
 
 

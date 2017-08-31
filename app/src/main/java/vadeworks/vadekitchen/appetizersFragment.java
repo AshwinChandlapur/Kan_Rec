@@ -65,7 +65,7 @@ public class appetizersFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_appetizers, container, false);//TODO: Should CHange this accordinly
         context = getActivity().getApplicationContext();
         //getActivity().getActionBar().setTitle("Appetizers");
-        ((MainActivity) getActivity()).getSupportActionBar().setTitle("Appetizers");
+        ((MainActivity) getActivity()).getSupportActionBar().setTitle(R.string.Appetizers);
 
         list = (ListView) view.findViewById(R.id.appetizersList);//TODO: Should Change this accordinly
         list.setSmoothScrollbarEnabled(true);

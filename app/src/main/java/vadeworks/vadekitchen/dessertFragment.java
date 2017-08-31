@@ -61,7 +61,7 @@ public class dessertFragment extends Fragment {
 
         list = (ListView) view.findViewById(R.id.dessertList);//TODO: Should CHange this accordinly
         list.setSmoothScrollbarEnabled(true);
-        ((MainActivity) getActivity()).getSupportActionBar().setTitle("Desserts");
+        ((MainActivity) getActivity()).getSupportActionBar().setTitle(R.string.Dessert);
 
 
         if (ContextCompat.checkSelfPermission(context, android.Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {

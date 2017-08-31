@@ -65,7 +65,7 @@ public class breakfastFragment extends Fragment {
         context = getActivity().getApplicationContext();
         list = (ListView) view.findViewById(R.id.breakfastList);//TODO: Should CHange this accordinly
         list.setSmoothScrollbarEnabled(true);
-        ((MainActivity) getActivity()).getSupportActionBar().setTitle("Breakfast");
+        ((MainActivity) getActivity()).getSupportActionBar().setTitle(R.string.Breakfast);
 
 
 
