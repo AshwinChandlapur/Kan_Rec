@@ -61,8 +61,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="25sp"
+                android:textSize="20sp"
                 android:id="@+id/onPicText"
+                android:lineSpacingExtra="1.2dp"
                 android:textColor="#ffffff"
                 android:layout_marginLeft="6dp"
                 android:layout_gravity="bottom"
@@ -104,8 +105,9 @@
                     android:layout_gravity="center_horizontal"
                     android:padding="6dp"
                     android:textAllCaps="false"
+                    android:lineSpacingExtra="1.2dp"
                     android:textColor="@color/defTextColor"
-                    android:textSize="26sp"
+                    android:textSize="23sp"
                     android:text="@string/recipeName"/>
 
 
@@ -199,14 +201,14 @@
                         android:textAllCaps="false"
                          android:id="@+id/time"
                         android:textColor="@color/defTextColor"
-                        android:textSize="25sp"
+                        android:textSize="20sp"
                         app:textWeight="normal"
                          android:baselineAlignBottom="true"
                          />
 
                     <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:src="@drawable/hourglass"
                         android:background="@null"
                         android:layout_marginTop="7dp"
@@ -256,12 +258,12 @@
                         android:textAllCaps="false"
                         android:id="@+id/ingredients"
                         android:textColor="@color/defTextColor"
-                        android:textSize="25sp"
+                        android:textSize="20sp"
                         app:textWeight="normal" />
 
                         <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@drawable/ingredients"
                             android:background="@null"
                             android:layout_marginTop="5dp"
@@ -275,6 +277,7 @@
                         android:id="@+id/ingredients_textView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:lineSpacingExtra="1.2dp"
                         android:layout_marginLeft="4dp"
                         android:layout_marginRight="4dp"
                         android:padding="6dp"
@@ -308,13 +311,13 @@
                         android:text="@string/directions"
                         android:textAllCaps="false"
                         android:textColor="@color/defTextColor"
-                        android:textSize="25sp"
+                        android:textSize="20sp"
                         app:textWeight="normal"
                         android:id="@+id/directions"/>
 
                         <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
                             android:src="@drawable/recipe"
                             android:background="@null"
                             android:layout_marginTop="8dp"
@@ -330,6 +333,7 @@
                         android:id="@+id/directions_textView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:lineSpacingExtra="1.2dp"
                         android:layout_marginLeft="4dp"
                         android:layout_marginRight="4dp"
                         android:padding="6dp"

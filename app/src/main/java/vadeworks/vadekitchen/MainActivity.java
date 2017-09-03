@@ -38,6 +38,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.github.florent37.viewtooltip.ViewTooltip;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
@@ -170,7 +171,7 @@ public class MainActivity extends AppCompatActivity
                         SharedPreferences.Editor editor = preferences.edit();
                         editor.putInt("first", 1);
                         editor.commit();
-                        Toast.makeText(getApplicationContext(), "Please Wait!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), R.string.PleaseWait, Toast.LENGTH_SHORT).show();
                         localVersion = preferences.getInt("version", 0);
                         new baseNewsVersion().execute("https://raw.githubusercontent.com/AshwinChandlapur/ImgLoader/gh-pages/base_version.json");
                         new baseFile().execute("https://raw.githubusercontent.com/AshwinChandlapur/ImgLoader/gh-pages/kannada_recipes.json");
@@ -180,7 +181,7 @@ public class MainActivity extends AppCompatActivity
                 {
                     SharedPreferences preferences = getSharedPreferences("only_once", Context.MODE_PRIVATE);
                     if (preferences.getBoolean("firstrun", true)) {
-                        Toast.makeText(this, "Please Connect to Internet!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(this, R.string.Connect, Toast.LENGTH_LONG).show();
                         preferences.edit().putBoolean("firstrun", false).commit();
                     }
 
@@ -206,6 +207,8 @@ public class MainActivity extends AppCompatActivity
                 }
             }
         });
+
+        ViewTooltip.on(fab).autoHide(true, 4000 ).corner(0).position(ViewTooltip.Position.LEFT).text("Click on the Button for more Recipes.").show();
 
         Typeface regular_font =Typeface.createFromAsset(this.getAssets(),"fonts/Aller_Rg.ttf");
 
@@ -540,7 +543,7 @@ public class MainActivity extends AppCompatActivity
                     }
                     //Compare Server Version of JSON and local version of JSON if not same download the new JSON content
                     if (localVersion != serverVersion) {
-                        pd.setMessage("Stirring Things Up. Please Wait.....");
+                        pd.setMessage("ಎಲ್ಲ ಅಡುಗೆಗಳು ತಯಾರಾಗುತ್ತಿವೆ.....ದಯವಿಟ್ಟು ಕಾಯಿರಿ!");
                         pd.setIcon(R.mipmap.ic_launcher);
                         pd.setCancelable(false);
                         pd.show();
@@ -590,7 +593,7 @@ public class MainActivity extends AppCompatActivity
         protected void onPostExecute(final String s) {
             super.onPostExecute(s);
 
-                    pd.setMessage("Updating Database...");
+                    pd.setMessage("ಡಾಟಬೇಸ್ ಅಪ್ ಡೇಟ್ ಪ್ರಗತಿಯಲ್ಲಿದೆ");
 
 
                     try {
@@ -634,7 +637,7 @@ public class MainActivity extends AppCompatActivity
 
                         if(pd.isShowing())
                             pd.dismiss();
-                        Toast.makeText(getApplicationContext(),"Update Successful",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(),"ಯಶಸ್ವಿಯಾಗಿ   ಡಾಟಾಬೇಸ್ ಅಪ್ ಡೇಟ್ ಆಗಿದೆ",Toast.LENGTH_SHORT).show();
 
                     } catch (JSONException e) {
                         e.printStackTrace();

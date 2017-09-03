@@ -38,7 +38,7 @@
         android:clickable="true"
         android:id="@+id/fab"
         android:src="@drawable/chef"
-        app:backgroundTint="#2a2a2a"
+        app:backgroundTint="#f1c40f"
         app:borderWidth="0dp"
         app:elevation="6dp"
         />

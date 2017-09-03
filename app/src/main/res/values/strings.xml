@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ಬೋಂಬಾಟ್ ಭೋಜನ</string>
+    <string name="app_name">ಬೋಂಬಾಟ್ ರೆಸಿಪೀಸ್</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -25,7 +25,9 @@
     <string name="Refresh">ರಿಫ್ರೆಶ್</string>
     <string name="Share">ಹಂಚು</string>
     <string name="Search">ಹುಡುಕು</string>
-
+    <string name="PleaseWait">ದಯವಿಟ್ಟು ಕಾಯಿರಿ!</string>
+    <string name="Connect">ದಯವಿಟ್ಟು ಇಂಟರ್ ನೆಟ್ ಕನೆಕ್ಟ್ ಮಾಡಿ</string>
+    <string name="Stirring">ಎಲ್ಲ ಅಡುಗೆಗಳು ತಯಾರಾಗುತ್ತಿವೆ.ದಯವಿಟ್ಟು ಕಾಯಿರಿ!</string>
 
     <!-- -
         This is an ad unit ID for an interstitial test ad. Replace with your own interstitial ad unit id.
