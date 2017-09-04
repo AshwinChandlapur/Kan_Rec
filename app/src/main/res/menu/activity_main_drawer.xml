@@ -23,10 +23,10 @@
         android:icon="@drawable/main_course"
         android:title="@string/MainCourse" />
 
-        <item
-            android:id="@+id/nav_dessert"
-            android:icon="@drawable/dessert"
-            android:title="@string/Dessert" />
+        <!--<item-->
+            <!--android:id="@+id/nav_dessert"-->
+            <!--android:icon="@drawable/dessert"-->
+            <!--android:title="@string/Dessert" />-->
 
     <item
         android:id="@+id/nav_snacks"

@@ -9,10 +9,10 @@ android {
     }
 
     defaultConfig {
-        applicationId "indian.recipes.cooking"
+        applicationId "kannada.bombhaat.recipes"
         minSdkVersion 16
         targetSdkVersion 25
-        versionCode 3
+        versionCode 1
         versionName "Broccoli"
     }
     buildTypes {

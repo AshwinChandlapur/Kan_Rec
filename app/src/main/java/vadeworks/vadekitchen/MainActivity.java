@@ -208,7 +208,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        ViewTooltip.on(fab).autoHide(true, 4000 ).corner(0).position(ViewTooltip.Position.LEFT).text("Click on the Button for more Recipes.").show();
+        ViewTooltip.on(fab).autoHide(true, 4000 ).corner(0).position(ViewTooltip.Position.LEFT).text("ಹೆಚ್ಚು ರೆಸಿಪಿಗಳಿಗಾಗಿ ಚೆಫ್ ಬಟ್ಟನ್ ಒತ್ತಿರಿ").show();
 
         Typeface regular_font =Typeface.createFromAsset(this.getAssets(),"fonts/Aller_Rg.ttf");
 
@@ -786,13 +786,13 @@ public class MainActivity extends AppCompatActivity
 
             case R.id.action_refresh:
                 if (isNetworkConnected()) {
-                    Toast.makeText(getApplicationContext(), "Please wait..", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), R.string.PleaseWait, Toast.LENGTH_SHORT).show();
                     SharedPreferences preferences = getSharedPreferences("base_version", Context.MODE_PRIVATE);
                     localVersion = preferences.getInt("version", 0);
                     //new baseNewsVersion().execute("http://nammakarnataka.net23.net/general/base_version.json");
                     new baseFile().execute("https://raw.githubusercontent.com/AshwinChandlapur/ImgLoader/gh-pages/kannadaRec.json");
                 } else {
-                    Toast.makeText(getApplicationContext(), "No Internet Connection", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),R.string.Connect, Toast.LENGTH_SHORT).show();
                 }
                 break;
         }
@@ -847,15 +847,15 @@ public class MainActivity extends AppCompatActivity
 
 
 
-            case R.id.nav_dessert:
-                fragment = new dessertFragment();
-                //fragment = new dessertsFragment();
-                ft = getSupportFragmentManager().beginTransaction();
-//                ft.setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.pop_enter, R.anim.pop_exit);
-                ft.replace(R.id.app_bar, fragment);
-                ft.addToBackStack(null);
-                ft.commit();
-                break;
+//            case R.id.nav_dessert:
+//                fragment = new dessertFragment();
+//                //fragment = new dessertsFragment();
+//                ft = getSupportFragmentManager().beginTransaction();
+////                ft.setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.pop_enter, R.anim.pop_exit);
+//                ft.replace(R.id.app_bar, fragment);
+//                ft.addToBackStack(null);
+//                ft.commit();
+//                break;
 
             case R.id.nav_snacks:
                 fragment = new snacksFragment();
