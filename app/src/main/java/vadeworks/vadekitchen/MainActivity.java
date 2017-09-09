@@ -778,7 +778,7 @@ public class MainActivity extends AppCompatActivity
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
                 sendIntent.putExtra(Intent.EXTRA_TEXT,
-                        "One Stop for your Indian Cusine Dishes\nDownload Now:\n" + str);
+                        "ಎಲ್ಲ ಭಾರತೀಯ ಅಡುಗೆಗಳಿಗೆ ಒಂದೇ ಆಪ್. ಇಂದೇ ಡೌನ್ ಲೋಡ್ ಮಾಡಿ:\n" + str);
                 sendIntent.setType("text/plain");
                 startActivity(sendIntent);
                 break;
