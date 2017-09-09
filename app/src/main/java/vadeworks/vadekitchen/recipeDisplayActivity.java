@@ -61,52 +61,52 @@ public class recipeDisplayActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_recipe_display);
 
         CoordinatorLayout  co= (CoordinatorLayout)findViewById(R.id.activity_recipe_display);
-        co.setOnTouchListener(new View.OnTouchListener() {
-
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                // TODO Auto-ge`enter code here`nerated method stub
-                Log.d("Touching","Touching");
-                i++;
-                if(i>47)
-                {
-                    i=0;
-                    displayInterstitial();
-                }
-                return false;
-            }
-        });
+//        co.setOnTouchListener(new View.OnTouchListener() {
+//
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                // TODO Auto-ge`enter code here`nerated method stub
+//                Log.d("Touching","Touching");
+//                i++;
+//                if(i>47)
+//                {
+//                    i=0;
+//                    displayInterstitial();
+//                }
+//                return false;
+//            }
+//        });
 
 
         android.support.v7.app.ActionBar AB = getSupportActionBar();
             AB.hide();
 
 
-        NativeExpressAdView adView = (NativeExpressAdView)findViewById(R.id.adView);
-        AdRequest request = new AdRequest.Builder()
-        .addTestDevice("E1C583B224120C3BEF4A3DB0177A7A37")
-               .build();
- adView.loadAd(request);
+//        NativeExpressAdView adView = (NativeExpressAdView)findViewById(R.id.adView);
+//        AdRequest request = new AdRequest.Builder()
+//        .addTestDevice("E1C583B224120C3BEF4A3DB0177A7A37")
+//               .build();
+// adView.loadAd(request);
 
 
 
-        //Interstitial Ad Space
-        AdRequest adRequests = new AdRequest.Builder()
-                .addTestDevice("E1C583B224120C3BEF4A3DB0177A7A37")
-                .build();
-        // Prepare the Interstitial Ad
-        interstitial = new InterstitialAd(recipeDisplayActivity.this);
-// Insert the Ad Unit ID
-        interstitial.setAdUnitId(getString(R.string.recipeDisplay_interstitial_id));
-        interstitial.loadAd(adRequests);
-// Prepare an Interstitial Ad Listener
-//        interstitial.setAdListener(new AdListener() {
-//            public void onAdLoaded() {
-//                // Call displayInterstitial() function
-//                displayInterstitial();
-//            }
-//        });
-// Interstetial ad Finished
+//        //Interstitial Ad Space
+//        AdRequest adRequests = new AdRequest.Builder()
+//                .addTestDevice("E1C583B224120C3BEF4A3DB0177A7A37")
+//                .build();
+//        // Prepare the Interstitial Ad
+//        interstitial = new InterstitialAd(recipeDisplayActivity.this);
+//// Insert the Ad Unit ID
+//        interstitial.setAdUnitId(getString(R.string.recipeDisplay_interstitial_id));
+//        interstitial.loadAd(adRequests);
+//// Prepare an Interstitial Ad Listener
+////        interstitial.setAdListener(new AdListener() {
+////            public void onAdLoaded() {
+////                // Call displayInterstitial() function
+////                displayInterstitial();
+////            }
+////        });
+//// Interstetial ad Finished
 
 
         final TextView recipe_textView = (TextView) findViewById(R.id.recipe_textView);
@@ -335,10 +335,10 @@ public class recipeDisplayActivity extends AppCompatActivity  {
 
 
 
-    public void displayInterstitial() {
-// If Ads are loaded, show Interstitial else show nothing.
-        if (interstitial.isLoaded()) {
-            interstitial.show();
-        }
-    }
+//    public void displayInterstitial() {
+//// If Ads are loaded, show Interstitial else show nothing.
+//        if (interstitial.isLoaded()) {
+//            interstitial.show();
+//        }
+//    }
 }
