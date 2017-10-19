@@ -38,8 +38,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.github.florent37.viewtooltip.ViewTooltip;
-import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -223,13 +224,18 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
         // Picasso.with(this).load("https://images6.alphacoders.com/336/336514.jpg").placeholder(R.drawable.background).centerCrop().into(h1);
 
+        RequestOptions options = new RequestOptions();
+        options.centerCrop();
+        options.placeholder(R.drawable.background);
+        options.error(R.drawable.background);
+
 
         CardView c1 =(CardView)findViewById(R.id.c1);
         ImageView i1 = (ImageView)findViewById(R.id.i1);
         TextView t1 = (TextView)findViewById(R.id.t1);
         t1.setTypeface(regular_font);
         t1.setText(d1[1]);
-        Picasso.with(this).load(R.drawable.d1).placeholder(R.drawable.background).into(i1);
+        Glide.with(this).load(R.drawable.d1).apply(options).into(i1);
         c1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -251,7 +257,7 @@ public class MainActivity extends AppCompatActivity
         TextView t2 =(TextView)findViewById(R.id.t2);
         t2.setTypeface(regular_font);
         t2.setText(d2[1]);
-        Picasso.with(this).load(R.drawable.d2).placeholder(R.drawable.background).into(i2);
+        Glide.with(this).load(R.drawable.d2).apply(options).into(i2);
         c2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -273,7 +279,7 @@ public class MainActivity extends AppCompatActivity
         TextView t3 = (TextView)findViewById(R.id.t3);
         t3.setTypeface(regular_font);
         t3.setText(d3[1]);
-        Picasso.with(this).load(R.drawable.d3).placeholder(R.drawable.background).into(i3);
+        Glide.with(this).load(R.drawable.d3).apply(options).into(i3);
         c3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -295,7 +301,7 @@ public class MainActivity extends AppCompatActivity
         TextView t4 = (TextView)findViewById(R.id.t4);
         t4.setTypeface(regular_font);
         t4.setText(d4[1]);
-        Picasso.with(this).load(R.drawable.d4).placeholder(R.drawable.background).into(i4);
+        Glide.with(this).load(R.drawable.d4).apply(options).into(i4);
         c4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -317,7 +323,7 @@ public class MainActivity extends AppCompatActivity
         TextView t5 = (TextView)findViewById(R.id.t5);
         t5.setTypeface(regular_font);
         t5.setText(d5[1]);
-        Picasso.with(this).load(R.drawable.d5).placeholder(R.drawable.background).into(i5);
+        Glide.with(this).load(R.drawable.d5).apply(options).into(i5);
         c5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -339,7 +345,7 @@ public class MainActivity extends AppCompatActivity
         TextView t6 = (TextView)findViewById(R.id.t6);
         t6.setTypeface(regular_font);
         t6.setText(d6[1]);
-        Picasso.with(this).load(R.drawable.d6).placeholder(R.drawable.background).into(i6);
+        Glide.with(this).load(R.drawable.d6).apply(options).into(i6);
         c6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -361,7 +367,7 @@ public class MainActivity extends AppCompatActivity
         TextView t7 = (TextView)findViewById(R.id.t7);
         t7.setTypeface(regular_font);
         t7.setText(d7[1]);
-        Picasso.with(this).load(R.drawable.d7).placeholder(R.drawable.background).into(i7);
+        Glide.with(this).load(R.drawable.d7).apply(options).into(i7);
         c7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -383,7 +389,7 @@ public class MainActivity extends AppCompatActivity
         TextView t8 = (TextView)findViewById(R.id.t8);
         t8.setTypeface(regular_font);
         t8.setText(d8[1]);
-        Picasso.with(this).load(R.drawable.d8).placeholder(R.drawable.background).into(i8);
+        Glide.with(this).load(R.drawable.d8).apply(options).into(i8);
         c8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -405,7 +411,7 @@ public class MainActivity extends AppCompatActivity
         TextView t9 = (TextView)findViewById(R.id.t9);
         t9.setTypeface(regular_font);
         t9.setText(d9[1]);
-        Picasso.with(this).load(R.drawable.d9).placeholder(R.drawable.background).into(i9);
+        Glide.with(this).load(R.drawable.d9).apply(options).into(i9);
         c9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -426,7 +432,7 @@ public class MainActivity extends AppCompatActivity
         TextView t10 = (TextView)findViewById(R.id.t10);
         t10.setTypeface(regular_font);
         t10.setText(d10[1]);
-        Picasso.with(this).load(R.drawable.d10).placeholder(R.drawable.background).into(i10);
+        Glide.with(this).load(R.drawable.d10).apply(options).into(i10);
         c10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -447,7 +453,7 @@ public class MainActivity extends AppCompatActivity
         TextView t11 = (TextView)findViewById(R.id.t11);
         t11.setTypeface(regular_font);
         t11.setText(d11[1]);
-        Picasso.with(this).load(R.drawable.d11).placeholder(R.drawable.background).into(i11);
+        Glide.with(this).load(R.drawable.d11).apply(options).into(i11);
         c11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -468,7 +474,7 @@ public class MainActivity extends AppCompatActivity
         TextView t12 = (TextView)findViewById(R.id.t12);
         t12.setTypeface(regular_font);
         t12.setText(d12[1]);
-        Picasso.with(this).load(R.drawable.d12).placeholder(R.drawable.background).into(i12);
+        Glide.with(this).load(R.drawable.d12).apply(options).into(i12);
         c12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

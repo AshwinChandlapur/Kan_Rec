@@ -29,13 +29,14 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.github.ivbaranov.mfb.MaterialFavoriteButton;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.Correlator;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.NativeExpressAdView;
-import com.squareup.picasso.Picasso;
 
 import java.util.zip.Inflater;
 
@@ -255,6 +256,53 @@ public class recipeDisplayActivity extends AppCompatActivity  {
 
 
 
+        //Interstitial Ad Space
+        AdRequest adRequests = new AdRequest.Builder()
+                .addTestDevice("E1C583B224120C3BEF4A3DB0177A7A37")
+                .build();
+        // Prepare the Interstitial Ad
+        interstitial = new InterstitialAd(recipeDisplayActivity.this);
+// Insert the Ad Unit ID
+        interstitial.setAdUnitId(getString(R.string.recipeDisplay_interstitial_id));
+        interstitial.loadAd(adRequests);
+
+
+        interstitial.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                // Code to be executed when an ad finishes loading.
+
+                displayInterstitial();
+                Log.i("Ads", "onAdLoaded");
+            }
+
+            @Override
+            public void onAdFailedToLoad(int errorCode) {
+                // Code to be executed when an ad request fails.
+                Log.i("Ads", "onAdFailedToLoad");
+            }
+
+            @Override
+            public void onAdOpened() {
+                // Code to be executed when the ad is displayed.
+                Log.i("Ads", "onAdOpened");
+            }
+
+            @Override
+            public void onAdLeftApplication() {
+                // Code to be executed when the user has left the app.
+                Log.i("Ads", "onAdLeftApplication");
+            }
+
+            @Override
+            public void onAdClosed() {
+                // Code to be executed when when the interstitial ad is closed.
+                Log.i("Ads", "onAdClosed");
+            }
+        });
+
+
+
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             img_id = extras.getInt("img_id");
@@ -268,12 +316,18 @@ public class recipeDisplayActivity extends AppCompatActivity  {
            // Toast.makeText(recipeDisplayActivity.this, uri, Toast.LENGTH_LONG).show();
             //The key argument here must match that used in the other activity
         }
-        Picasso.with(this)
+
+        RequestOptions options = new RequestOptions();
+        options.centerCrop();
+//        options.placeholder(R.drawable.burger);
+        options.error(R.drawable.background);
+
+        Glide.with(this)
                 .load(sr)
-                .fit()
-                .centerCrop()
-                .noFade()
+                .apply(options)
                 .into(recipeImage);
+
+
         recipe_textView.setText(extras.getString("name"));
         time_textView.setText(extras.getString("time"));
         ingredients_textView.setText(extras.getString("ingredients"));
@@ -333,12 +387,10 @@ public class recipeDisplayActivity extends AppCompatActivity  {
     }
 
 
-
-
-//    public void displayInterstitial() {
-//// If Ads are loaded, show Interstitial else show nothing.
-//        if (interstitial.isLoaded()) {
-//            interstitial.show();
-//        }
-//    }
+    public void displayInterstitial() {
+// If Ads are loaded, show Interstitial else show nothing.
+        if (interstitial.isLoaded()) {
+            interstitial.show();
+        }
+    }
 }
